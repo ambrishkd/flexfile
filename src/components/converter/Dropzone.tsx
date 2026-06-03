@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { UploadCloud, RefreshCw } from "lucide-react";
 import { Action } from "@/types";
@@ -13,7 +13,14 @@ import { cn } from "@/utils/cn";
 
 export default function Dropzone() {
     const [actions, setActions] = useState<Action[]>([]);
-    const { convert, isLoading } = useFFmpeg();
+
+    // const { convert, isLoading } = useFFmpeg();
+    
+    // Fix: Load FFmpeg once when the page opens so the first conversion doesn't have to wait for FFmpeg initialization.
+    const { convert, load, isLoading } = useFFmpeg();
+    useEffect(() => {
+        load();
+    }, []);
 
     const onDrop = useCallback((acceptedFiles: File[]) => {
         const newActions: Action[] = acceptedFiles.map((file) => {
