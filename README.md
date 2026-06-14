@@ -1,8 +1,8 @@
-# Morphix 
+# FileMorphix 
 
 **A free, unlimited file converter that runs entirely in your browser. No uploads, No limits.**
 
-Morphix lets you convert images, audio, and video files between formats without ever sending your files anywhere. Every conversion happens locally on your device using FFmpeg compiled to WebAssembly.
+FileMorphix lets you convert images, audio, and video files between formats without ever sending your files anywhere. Every conversion happens locally on your device using FFmpeg compiled to WebAssembly.
 
 > Built as a personal learning project from scratch to deeply understand Next.js, TypeScript, and browser-based media processing.
 
@@ -17,8 +17,8 @@ Morphix lets you convert images, audio, and video files between formats without 
 ## Running Locally
  
 ```bash
-git clone https://github.com/ambrishkd/morphix.git
-cd morphix
+git clone https://github.com/ambrishkd/filemorphix.git
+cd filemorphix
 npm install
 npm run dev
 ```

@@ -5,7 +5,7 @@ import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-    title: "Morphix - Free Unlimited File Converter",
+    title: "FileMorphix - Free Unlimited File Converter",
     description:
         "Convert images, audio, and video files for free. All processing happens locally on your device for enhanced privacy and security.",
     icons: {
